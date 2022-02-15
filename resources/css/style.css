@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -51,6 +59,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -71,6 +80,7 @@ body {
   top: 0;
   background-color: rgba(225, 225, 225, 0.8);
   width: 100%;
+  -webkit-box-shadow: 0 2px 2px #efefef;
   box-shadow: 0 2px 2px #efefef;
   z-index: 1;
 }
@@ -126,10 +136,15 @@ body {
 /*** HEADER SECTION ***/
 
 header {
-  background-image: -webkit-linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgb(0, 0, 0, 0.7)
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      to(rgb(0, 0, 0, 0.7))
     ),
+    url("/resources/css/img/header-img-min.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.7)),
     url("/resources/css/img/header-img-min.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.7)),
     url("/resources/css/img/header-img-min.jpg");
@@ -145,6 +160,7 @@ header {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -253,9 +269,11 @@ h2 {
   opacity: 0.7;
   height: auto;
   -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
   transform: scale(1.15);
   -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
@@ -266,6 +284,7 @@ h2 {
 
 .portfolio-image img:hover {
   -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
 }
@@ -320,10 +339,15 @@ h2 {
 /*** TESTIMONIAL SECTION ***/
 
 .testimonial-section {
-  background-image: -webkit-linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.8)
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0.8))
     ),
+    url(/resources/img/testimonial-background-min.jpg);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url(/resources/img/testimonial-background-min.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url(/resources/img/testimonial-background-min.jpg);
@@ -394,6 +418,7 @@ cite img {
   background-color: #fff;
   width: 90%;
   margin-bottom: 30px;
+  -webkit-box-shadow: 0 3px 2px #efefef;
   box-shadow: 0 3px 2px #efefef;
   text-align: left;
 }
@@ -537,6 +562,7 @@ footer {
   color: #fff;
   text-decoration: none;
   -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
 }
 
@@ -555,24 +581,28 @@ footer {
 .fa-facebook-f:active {
   color: #3b5998;
   -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
 }
 
 .fa-twitter:hover {
   color: #55acee;
   -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
 }
 
 .fa-google-plus-g:hover {
   color: #dd4b39;
   -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
 }
 
 .fa-instagram:hover {
   color: #8a3ab9;
   -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
 }
 
@@ -586,6 +616,7 @@ footer p {
 
 .js--about-box {
   opacity: 0;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
@@ -594,5 +625,6 @@ footer p {
 }
 
 .js--service-box {
+  -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
 }
