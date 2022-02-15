@@ -346,11 +346,11 @@ h2 {
       from(rgba(0, 0, 0, 0.5)),
       to(rgba(0, 0, 0, 0.8))
     ),
-    url(/resources/img/testimonial-background-min.jpg);
+    url(../img/testimonial-background-min.jpg);
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(/resources/img/testimonial-background-min.jpg);
+    url(../img/testimonial-background-min.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-    url(/resources/img/testimonial-background-min.jpg);
+    url(../img/testimonial-background-min.jpg);
 
   background-size: cover;
   background-position: center;
